@@ -1,0 +1,19 @@
+[req]
+default_bits		=	2048
+default_keyfile		=	privkey.pem
+string_mask		=	utf8only
+distinguished_name	=	req_distinguished_name
+req_extensions		=	v3_req
+x509_extensions		=	v3_ca
+[req_distinguished_name]
+commonName		=	Common Name (e.g. server FQDN or YOUR name)
+commonName_max		=	64
+SET-ex3			=	SET extension number 3
+[v3_req]
+basicConstraints	=	critical, CA:FALSE
+keyUsage		=	critical, nonRepudiation, digitalSignature
+extendedKeyUsage	=	critical, clientAuth
+[v3_ca]
+basicConstraints	=	critical, CA:FALSE
+keyUsage		=	critical, nonRepudiation, digitalSignature
+extendedKeyUsage	=	critical, clientAuth
